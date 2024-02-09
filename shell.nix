@@ -8,12 +8,14 @@
      git
      neovim
      python311
+     python311Packages.pip
      pdm
    ];
 
    GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
    shellHook = ''
        python --version
+       pip --version
        pdm install
        pdm build
        pdm run python -m unittest
