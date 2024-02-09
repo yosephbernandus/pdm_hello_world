@@ -8,3 +8,7 @@
 - pdm install: to installing
 - pdm build: to build
 - source .venv/bin/activate : to activate virtual env based on pdm that created
+
+# Using Nix
+- makesure nix package manager already installed
+- nix-shell shell.nix
