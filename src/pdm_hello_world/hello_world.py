@@ -1,2 +1,2 @@
 def hello(params):
-    return f"Hello World, {params} !"
+    return f"Hello, {params} !"
