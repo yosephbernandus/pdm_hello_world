@@ -7,12 +7,16 @@
    packages = with pkgs; [
      git
      neovim
-     python311]
+     python311
      pdm
    ];
 
    GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
    shellHook = ''
        python --version
+       pdm install
+       pdm build
+       pdm run python -m unittest
+       pdm run python hello.py
    '';
  }
