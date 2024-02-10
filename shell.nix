@@ -19,6 +19,6 @@
        pdm install
        pdm build
        pdm run python -m unittest
-       pdm run python hello.py -name World
+       pdm run hello.py
    '';
  }
