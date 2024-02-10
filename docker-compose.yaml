@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  pdm_hello_world:
+    container_name: pdm_hello_world
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    command: >
+      sh -c "pdm install &&
+             pdm build &&
+             pdm run python -m unittest &&
+             pdm run python hello.py -name World"
+    image: "pdm_hello_world:1.0.0"
