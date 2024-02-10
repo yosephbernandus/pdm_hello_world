@@ -8,3 +8,5 @@ RUN pip install --upgrade pip
 RUN pip install pdm
 RUN pdm install
 RUN pdm build
+
+EXPOSE 8000

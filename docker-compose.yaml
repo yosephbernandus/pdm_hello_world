@@ -5,9 +5,9 @@ services:
     build:
       context: "."
       dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
     command: >
-      sh -c "pdm install &&
-             pdm build &&
-             pdm run python -m unittest &&
-             pdm run python hello.py -name World"
+      sh -c "pdm run python -m unittest &&
+             pdm run hello.py"
     image: "pdm_hello_world:1.0.0"
