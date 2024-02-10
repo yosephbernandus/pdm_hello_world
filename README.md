@@ -12,3 +12,6 @@
 # Using Nix
 - makesure nix package manager already installed
 - nix-shell shell.nix
+
+# Docker
+- docker-compose up -d
